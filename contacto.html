@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="CSS\estilos2.css">
+    <script src="https://kit.fontawesome.com/168e9a4610.js" crossorigin="anonymous"></script>
+    <script>
+        function iniciar() {
+        var boton = document.getElementById("enviar");
+        boton.addEventListener("click", enviarformulario);
+        }
+        function enviarformulario() {
+        var formulario = document.querySelector("form[name='informacion']");
+        var valido = formulario.checkValidity();
+        if (valido) {
+        formulario.submit();
+        } else {
+        alert("El formulario no puede ser enviado");
+        }
+        }
+        window.addEventListener("load", iniciar);
+        </script>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Principal</a> |
+        <a href="cv.html">CV</a>
+    </nav>
+    <main>
+     <h1>Datos de contacto</h1>
+     <ul>
+        <li><i class="fa-solid fa-phone"></i> Suspendisse faucibus</li>
+        <li><i class="fa-solid fa-envelope"></i> Vestibulum@mattis.com</li>
+        <li><i class="fa-solid fa-house"></i> Eu facilisis morbi </li>
+        <li><i class="fa-brands fa-linkedin"></i> Mauris.com/in/nunc-congue-834567</li>
+        <li><i class="fa-solid fa-globe"></i> Nulla@aliquet.com</li>
+      </ul>
+
+    </main>
+    <header><strong>Enviar un mensaje de contacto</strong></header>
+    <section>
+        <form name="informacion" method="get" action="procesar.php">
+        <p><label>Correo: <input type="email" name="correo" id="correo"
+        required></label></p>
+        <p><button type="button" id="enviar">Registrarse</button></p>
+        </form>
+        </section>
+    <footer>
+        <nav>
+            <a href="index.html">Principal</a> |
+            <a href="cv.html">CV</a>
+        </nav>  
+    </footer>
+</body>
+</html>
